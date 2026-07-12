@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SummaryViewController: UIViewController {
 
@@ -18,11 +19,19 @@ class SummaryViewController: UIViewController {
     var winnerName: String = ""
     var finalScore: Int = 0
 
+    // MARK: - Audio
+    private var winPlayer: AVAudioPlayer?
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         winnerLabel.text = "Winner: \(winnerName)"
         scoreLabel.text = "score: \(finalScore)"
+
+        if let url = Bundle.main.url(forResource: "win", withExtension: "wav") {
+            winPlayer = try? AVAudioPlayer(contentsOf: url)
+            winPlayer?.play()
+        }
     }
 
     // MARK: - Back to menu

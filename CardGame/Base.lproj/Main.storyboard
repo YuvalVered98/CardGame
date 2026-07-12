@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="name-btn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="name-btn">
                                 <rect key="frame" x="361" y="24" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Insert name"/>
@@ -23,36 +23,36 @@
                                     <action selector="nameButtonTapped:" destination="menu-vc" eventType="touchUpInside" id="name-btn-action"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Gabi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="greeting-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Gabi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="greeting-lbl">
                                 <rect key="frame" x="276" y="60" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="west-img">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="west-img">
                                 <rect key="frame" x="80" y="135" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="West Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="west-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="West Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="west-lbl">
                                 <rect key="frame" x="70" y="260" width="140" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="east-img">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="east-img">
                                 <rect key="frame" x="652" y="135" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="East Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="east-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="East Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="east-lbl">
                                 <rect key="frame" x="642" y="260" width="140" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="start-btn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="start-btn">
                                 <rect key="frame" x="376" y="320" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="START"/>
@@ -62,7 +62,31 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="menu-safe-area"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="name-btn" firstAttribute="top" secondItem="menu-safe-area" secondAttribute="top" constant="16" id="mc-01"/>
+                            <constraint firstItem="name-btn" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="mc-02"/>
+                            <constraint firstItem="greeting-lbl" firstAttribute="top" secondItem="name-btn" secondAttribute="bottom" constant="8" id="mc-03"/>
+                            <constraint firstItem="greeting-lbl" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="mc-04"/>
+                            <constraint firstItem="greeting-lbl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="menu-safe-area" secondAttribute="leading" constant="16" id="mc-05"/>
+                            <constraint firstItem="greeting-lbl" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="menu-safe-area" secondAttribute="trailing" constant="-16" id="mc-06"/>
+                            <constraint firstItem="west-img" firstAttribute="leading" secondItem="menu-safe-area" secondAttribute="leading" constant="24" id="mc-07"/>
+                            <constraint firstItem="west-img" firstAttribute="centerY" secondItem="menu-view" secondAttribute="centerY" id="mc-08"/>
+                            <constraint firstItem="west-img" firstAttribute="width" constant="100" id="mc-09"/>
+                            <constraint firstItem="west-img" firstAttribute="height" constant="100" id="mc-10"/>
+                            <constraint firstItem="west-lbl" firstAttribute="top" secondItem="west-img" secondAttribute="bottom" constant="8" id="mc-11"/>
+                            <constraint firstItem="west-lbl" firstAttribute="centerX" secondItem="west-img" secondAttribute="centerX" id="mc-12"/>
+                            <constraint firstItem="east-img" firstAttribute="trailing" secondItem="menu-safe-area" secondAttribute="trailing" constant="-24" id="mc-13"/>
+                            <constraint firstItem="east-img" firstAttribute="centerY" secondItem="west-img" secondAttribute="centerY" id="mc-14"/>
+                            <constraint firstItem="east-img" firstAttribute="width" constant="100" id="mc-15"/>
+                            <constraint firstItem="east-img" firstAttribute="height" constant="100" id="mc-16"/>
+                            <constraint firstItem="east-lbl" firstAttribute="top" secondItem="east-img" secondAttribute="bottom" constant="8" id="mc-17"/>
+                            <constraint firstItem="east-lbl" firstAttribute="centerX" secondItem="east-img" secondAttribute="centerX" id="mc-18"/>
+                            <constraint firstItem="start-btn" firstAttribute="bottom" secondItem="menu-safe-area" secondAttribute="bottom" constant="-16" id="mc-19"/>
+                            <constraint firstItem="start-btn" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="mc-20"/>
+                            <constraint firstItem="start-btn" firstAttribute="width" constant="120" id="mc-21"/>
+                            <constraint firstItem="start-btn" firstAttribute="height" constant="46" id="mc-22"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="eastImageView" destination="east-img" id="conn-east-img"/>
@@ -86,49 +110,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Player" textAlignment="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="player-name-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Player" textAlignment="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="player-name-lbl">
                                 <rect key="frame" x="60" y="24" width="220" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="player-score-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="player-score-lbl">
                                 <rect key="frame" x="60" y="48" width="120" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pc-name-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc-name-lbl">
                                 <rect key="frame" x="572" y="24" width="220" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pc-score-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc-score-lbl">
                                 <rect key="frame" x="672" y="48" width="120" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="player-card-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="player-card-lbl">
                                 <rect key="frame" x="296" y="110" width="110" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pc-card-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc-card-lbl">
                                 <rect key="frame" x="446" y="110" width="110" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="timer-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="timer-lbl">
                                 <rect key="frame" x="406" y="180" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -137,7 +161,29 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="game-safe-area"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="player-name-lbl" firstAttribute="top" secondItem="game-safe-area" secondAttribute="top" constant="16" id="gc-01"/>
+                            <constraint firstItem="player-name-lbl" firstAttribute="leading" secondItem="game-safe-area" secondAttribute="leading" constant="16" id="gc-02"/>
+                            <constraint firstItem="player-score-lbl" firstAttribute="top" secondItem="player-name-lbl" secondAttribute="bottom" constant="4" id="gc-03"/>
+                            <constraint firstItem="player-score-lbl" firstAttribute="leading" secondItem="player-name-lbl" secondAttribute="leading" id="gc-04"/>
+                            <constraint firstItem="pc-name-lbl" firstAttribute="top" secondItem="game-safe-area" secondAttribute="top" constant="16" id="gc-05"/>
+                            <constraint firstItem="pc-name-lbl" firstAttribute="trailing" secondItem="game-safe-area" secondAttribute="trailing" constant="-16" id="gc-06"/>
+                            <constraint firstItem="pc-score-lbl" firstAttribute="top" secondItem="pc-name-lbl" secondAttribute="bottom" constant="4" id="gc-07"/>
+                            <constraint firstItem="pc-score-lbl" firstAttribute="trailing" secondItem="pc-name-lbl" secondAttribute="trailing" id="gc-08"/>
+                            <constraint firstItem="timer-lbl" firstAttribute="centerX" secondItem="game-view" secondAttribute="centerX" id="gc-09"/>
+                            <constraint firstItem="timer-lbl" firstAttribute="centerY" secondItem="game-view" secondAttribute="centerY" id="gc-10"/>
+                            <constraint firstItem="timer-lbl" firstAttribute="width" constant="40" id="gc-11"/>
+                            <constraint firstItem="timer-lbl" firstAttribute="height" constant="40" id="gc-12"/>
+                            <constraint firstItem="player-card-lbl" firstAttribute="trailing" secondItem="timer-lbl" secondAttribute="leading" constant="-20" id="gc-13"/>
+                            <constraint firstItem="player-card-lbl" firstAttribute="centerY" secondItem="timer-lbl" secondAttribute="centerY" id="gc-14"/>
+                            <constraint firstItem="player-card-lbl" firstAttribute="width" constant="110" id="gc-15"/>
+                            <constraint firstItem="player-card-lbl" firstAttribute="height" constant="170" id="gc-16"/>
+                            <constraint firstItem="pc-card-lbl" firstAttribute="leading" secondItem="timer-lbl" secondAttribute="trailing" constant="20" id="gc-17"/>
+                            <constraint firstItem="pc-card-lbl" firstAttribute="centerY" secondItem="timer-lbl" secondAttribute="centerY" id="gc-18"/>
+                            <constraint firstItem="pc-card-lbl" firstAttribute="width" constant="110" id="gc-19"/>
+                            <constraint firstItem="pc-card-lbl" firstAttribute="height" constant="170" id="gc-20"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pcCardLabel" destination="pc-card-lbl" id="conn-pc-card"/>
@@ -161,21 +207,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="Winner: Gabi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="winner-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="Winner: Gabi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="winner-lbl">
                                 <rect key="frame" x="176" y="120" width="500" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="score: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="score-lbl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="score: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="score-lbl">
                                 <rect key="frame" x="176" y="195" width="500" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="back-btn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="back-btn">
                                 <rect key="frame" x="356" y="290" width="140" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="BACK TO MENU"/>
@@ -185,7 +231,19 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="summary-safe-area"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="winner-lbl" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="sc-01"/>
+                            <constraint firstItem="winner-lbl" firstAttribute="centerY" secondItem="summary-view" secondAttribute="centerY" constant="-60" id="sc-02"/>
+                            <constraint firstItem="winner-lbl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="summary-safe-area" secondAttribute="leading" constant="16" id="sc-03"/>
+                            <constraint firstItem="winner-lbl" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="summary-safe-area" secondAttribute="trailing" constant="-16" id="sc-04"/>
+                            <constraint firstItem="score-lbl" firstAttribute="top" secondItem="winner-lbl" secondAttribute="bottom" constant="12" id="sc-05"/>
+                            <constraint firstItem="score-lbl" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="sc-06"/>
+                            <constraint firstItem="back-btn" firstAttribute="top" secondItem="score-lbl" secondAttribute="bottom" constant="40" id="sc-07"/>
+                            <constraint firstItem="back-btn" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="sc-08"/>
+                            <constraint firstItem="back-btn" firstAttribute="width" constant="160" id="sc-09"/>
+                            <constraint firstItem="back-btn" firstAttribute="height" constant="46" id="sc-10"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scoreLabel" destination="score-lbl" id="conn-score-lbl"/>
