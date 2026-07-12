@@ -26,6 +26,13 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: - Config
     /// The dividing longitude given in the assignment.
     private let midpointLongitude = 34.817549168324334
+    /// Muted in dark mode (night), vivid in light mode (day).
+    private static let westTint = UIColor { $0.userInterfaceStyle == .dark
+        ? UIColor(red: 0.30, green: 0.45, blue: 0.70, alpha: 1)
+        : .systemBlue }
+    private static let eastTint = UIColor { $0.userInterfaceStyle == .dark
+        ? UIColor(red: 0.35, green: 0.55, blue: 0.40, alpha: 1)
+        : .systemGreen }
 
     // MARK: - State
     private let locationManager = CLLocationManager()
@@ -43,8 +50,8 @@ class MenuViewController: UIViewController, CLLocationManagerDelegate {
         // Globe images (set in code so the storyboard stays simple).
         westImageView.image = UIImage(systemName: "globe.americas.fill")
         eastImageView.image = UIImage(systemName: "globe.asia.australia.fill")
-        westImageView.tintColor = .systemBlue
-        eastImageView.tintColor = .systemGreen
+        westImageView.tintColor = Self.westTint
+        eastImageView.tintColor = Self.eastTint
 
         // Make START look like a button.
         styleAsButton(startButton)
